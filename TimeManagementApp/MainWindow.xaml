@@ -1,0 +1,39 @@
+﻿<Window x:Class="TimeManagementApp.MainWindow"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Time Management App" Height="400" Width="600">
+
+    <Grid>
+        <!-- UI Elements -->
+        <StackPanel Margin="10">
+            <!-- UI elements for adding modules -->
+            <!-- UI elements for recording study hours -->
+            <!-- Display module information -->
+        </StackPanel>
+        <TextBox Name="txtCode" Width="150"/>
+        <TextBox Name="txtName" Width="150"/>
+        <TextBox Name="txtCredits" Width="50"/>
+        <TextBox Name="txtClassHours" Width="50"/>
+        <TextBox Name="txtWeeksInSemester" Width="50"/>
+        <DatePicker Name="dpStartDate"/>
+        <DatePicker Name="dpRecordDate" Width="150"/>
+        <TextBox Name="txtHoursStudied" Width="50"/>
+        <ListView Name="lvModules">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Code" Width="100" DisplayMemberBinding="{Binding Code}"/>
+                    <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Credits" Width="100" DisplayMemberBinding="{Binding Credits}"/>
+                    <GridViewColumn Header="Class Hours/Week" Width="150" DisplayMemberBinding="{Binding ClassHoursPerWeek}"/>
+                    <!-- Additional columns as needed -->
+
+                </GridView>
+
+            </ListView.View>
+
+        </ListView>
+
+
+    </Grid>
+</Window>
